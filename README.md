@@ -32,7 +32,7 @@ Includes 4 services/functions
 - Flow Scheduling Function `flow_scheduler` 
 - Flow Execution Service `flow_agent` 
 
-> [!NOTICE]
+> [!NOTE]
 > You may deploy above 4 services/functions on one computer (`local version`) or 4 seperate computers (`distributed version`). In the `distributed version`, these computers are named `COMPUTER_1`, `COMPUTER_2`, `COMPUTER_3`, and `COMPUTER_4` in this document.
 > Alos, if you choose to setup with  `distributed version`, you will need to conduct `Preparation` section for each computer.
 
@@ -164,7 +164,7 @@ When `Server` is set within a minute, you will get 4 docker containers:
 
 
 Also, you may check the WebUI for the service:
-> [!NOTICE]
+> [!NOTE]
 > Please replace the following  `IP` with `localhost` for the local version and with `SERVER_IP` obtained from the step 0 for the distributed version.
 - MinIO (URL: `http://IP:9001`, account: `admin`, password: `adminsecretkey`)
 ![minio_s3_success_ui](png/minio_s3_success_ui.png)
@@ -266,7 +266,7 @@ $ prefect agent start -p 'default-agent-pool'
 ```
 
 Now you may check the schedule on Prefect WebUI (URL: `http://IP:4200`) as the image below:
-> [!NOTICE]
+> [!NOTE]
 > Please replace the following  `IP` with `localhost` for the local version and with `SERVER_IP` obtained from the step 0 for the distributed version.
 
 ![flow_scheduler_success_ui](png/flow_scheduler_success_ui.png)
