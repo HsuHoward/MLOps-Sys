@@ -282,9 +282,10 @@ You can set up a CPU/GPU agent using the following command. Additionally, within
 # local version
 export POOL_NAME=default-agent-pool # allocate the agent to this resource pool 
 export QUEUE_NAME=ml # project name
-## create a cpu agent
+## create a CPU agent
 docker compose -f flow_agent/docker-compose-local-cpu.yml --env-file flow_agent/.env.local up --build -d
-## create a gpu agent
+## create a GPU agent
+export GPU_IDS='["0"]' # choose GPUs with ids. e.g., '["0", "2"]'
 docker compose -f flow_agent/docker-compose-gpu.yml --env-file flow_agent/.env.local up --build -d
 ```
 ```bash
@@ -292,9 +293,10 @@ docker compose -f flow_agent/docker-compose-gpu.yml --env-file flow_agent/.env.l
 export SERVER_IP=<YOUR_SERVER_IP> # replace <YOUR_SERVER_IP> with SERVER_IP from step 0
 export POOL_NAME=default-agent-pool # allocate the agent to this resource pool 
 export QUEUE_NAME=ml # project name
-## create a cpu agent
+## create a CPU agent
 docker compose -f flow_agent/docker-compose-cpu.yml --env-file flow_agent/.env up --build -d
-## create a gpu agent
+## create a GPU agent
+export GPU_IDS='["0"]' # choose GPUs with ids. e.g., '["0", "2"]'
 docker compose -f flow_agent/docker-compose-gpu.yml --env-file flow_agent/.env up --build -d
 ```
 
