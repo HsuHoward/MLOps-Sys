@@ -4,7 +4,8 @@ This project aims to build a straightforward MLOps system tailored to the model 
 
 
 # Preparation
-1. Install packages - [`git`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [`conda`](https://conda.io/projects/conda/en/latest/user-guide/install/index.html#), [`docker`](https://docs.docker.com/engine/install/) 
+1. Install packages - [`Git`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [`Conda`](https://conda.io/projects/conda/en/latest/user-guide/install/index.html#), [`Docker`](https://docs.docker.com/engine/install/) 
+    - [`NVIDIA Container Toolkit`](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html), if you want to use Docker with NVIDIA GPU (only the computers in step 4 may need this package)
 
 > [!NOTE]
 > docker-compose version >= 2.17.0
