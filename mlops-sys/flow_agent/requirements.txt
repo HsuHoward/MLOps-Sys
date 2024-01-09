@@ -1,0 +1,11 @@
+# Related packages used in flow.py (except mlflow & prefect)
+
+## take flows/example_flow as example
+
+### dumping function
+dill==0.3.6
+
+pandas==2.0.2
+scikit-learn==1.2.2
+xgboost==1.7.6
+hyperopt==0.2.7

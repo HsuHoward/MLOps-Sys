@@ -1,0 +1,24 @@
+RFS_NAME: 'minio' # name of remote file system, should be the same as RFS_NAME in server/.env
+
+
+# Flow Configuration
+# "flow_name/deploy_name" must be unique, you can check the existed names for Prefect WebUI
+deployment:
+  flow_py_name: prefect_flow.py    # flow.py. filename contains @flow
+  flow_name: main                  # flow name. should be same as the function nem decorated with "@flow" in flow_py_name
+  deploy_name: model_training      # schedule purpose. e.g., daliy_model、data_update等
+  pool_name: default-agent-pool    # resource pool to conduct the flow.
+  queue_name: ml                   # project name
+
+# schedule time setup
+scheduler:
+  # main configuration
+  method: 'rrule'                  # schedule method. interval | cron | rrule
+  timezone: 'Asia/Taipei'          # time zone. e.g., 'Asia/Taipei', 'UTC'
+  # detail setting (only the one chosen by 'method' will be configured)
+  interval: 60                     # sec
+  cron: '1 * * * *'
+  rrule: 'FREQ=WEEKLY;BYDAY=MO,WE,FR;UNTIL=20240730T040000Z'
+
+  # how to setup cron & rrule? check the link below
+  # https://docs.prefect.io/2.10.21/concepts/schedules/
