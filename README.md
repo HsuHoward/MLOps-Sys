@@ -216,7 +216,7 @@ Enjoy your model development!
 ## Step 3. Setup a schedule for your project - flow_scheduler
 After completing your model development, you may want to set up a pipeline to retrain your model on a scheduled basis. The scheduling process involves uploading your pipeline to the `Prefect server` located on the `Server`.
 
-To configure the schedule, you need to create a folder under `flows`(e.g., `example_flow`), and copy your project files (e.g., `example_project`) to the folder. Also, you will need to modify your code with `Prefect` module:
+To configure the schedule, you need to create a folder under `flows`(e.g., [`example_flow`](./flows/example_flow)), and copy your project files (e.g., [`example_project`](./dev-projects/example_project)) to the folder. Also, you will need to modify your code with `Prefect` module:
 ``` python
 from prefect import flow, task
 
